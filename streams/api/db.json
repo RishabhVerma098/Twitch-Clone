@@ -1,3 +1,30 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "My first blog",
+      "description": "this is my very first blog",
+      "id": 1
+    },
+    {
+      "title": "second blog",
+      "description": "this is my second blog",
+      "id": 2
+    },
+    {
+      "title": "second blog",
+      "description": "this is my second blog",
+      "id": 3
+    },
+    {
+      "title": "rishabh",
+      "description": "this is my name",
+      "id": 4
+    },
+    {
+      "title": "verma",
+      "description": "yoo this is my surname",
+      "userId": "103625294957984212629",
+      "id": 5
+    }
+  ]
 }
