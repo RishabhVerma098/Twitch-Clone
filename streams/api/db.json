@@ -11,11 +11,6 @@
       "id": 2
     },
     {
-      "title": "second blog",
-      "description": "this is my second blog",
-      "id": 3
-    },
-    {
       "title": "rishabh",
       "description": "this is my name",
       "id": 4
@@ -25,12 +20,6 @@
       "description": "yoo this is my surname",
       "userId": "103625294957984212629",
       "id": 5
-    },
-    {
-      "title": "forced navigation",
-      "description": "using forced navigation in here",
-      "userId": "103625294957984212629",
-      "id": 6
     },
     {
       "title": "now creating forced navigation",

@@ -11,7 +11,9 @@ class StreamList extends Component {
     if (stream.userId === this.props.currentUserId) {
       return (
         <span>
-          <span className="btn btn-primary">EDIT</span>
+          <Link to={"/streams/edit/" + stream.id} className="btn btn-primary">
+            EDIT
+          </Link>
           {"  "}
           <span className="btn btn-danger">DELETE</span>
         </span>
@@ -23,8 +25,8 @@ class StreamList extends Component {
     return this.props.streams.map(stream => {
       return (
         // eslint-disable-next-line jsx-a11y/anchor-is-valid
-        <a
-          href="#"
+        <Link
+          to="/"
           className="list-group-item list-group-item-action flex-column align-items-start"
           key={stream.id}
         >
@@ -33,7 +35,7 @@ class StreamList extends Component {
             {this.renderAdmin(stream)}
           </div>
           <p className="mb-1">{stream.description}</p>
-        </a>
+        </Link>
       );
     });
   }
