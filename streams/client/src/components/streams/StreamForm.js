@@ -40,21 +40,15 @@ class StreamForm extends Component {
 
   render() {
     return (
-      <div className="container" style={{ marginTop: "50px" }}>
-        <form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
-          <Field
-            name="title"
-            component={this.renderInput}
-            label=" Enter Title"
-          />
-          <Field
-            name="description"
-            component={this.renderInput}
-            label="Enter Description"
-          />
-          <button className="btn btn-primary">Done</button>
-        </form>
-      </div>
+      <form onSubmit={this.props.handleSubmit(this.handleSubmit)}>
+        <Field name="title" component={this.renderInput} label=" Enter Title" />
+        <Field
+          name="description"
+          component={this.renderInput}
+          label="Enter Description"
+        />
+        <button className="btn btn-primary">Done</button>
+      </form>
     );
   }
 }
