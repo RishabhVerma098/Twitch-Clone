@@ -26,13 +26,21 @@ class StreamDelete extends Component {
     this.props.deleteStream(this.props.match.params.id);
   };
 
+  titleRender = () => {
+    const title = "Delete Stream : '" + this.props.streams.title + "'";
+    return title;
+  };
+
   render() {
-    console.log(this.props.match.params.id);
+    console.log(this.props.streams);
+    if (!this.props.streams) {
+      return <div>Loding!!</div>;
+    }
     return (
       <div className="container" style={{ marginTop: "3em" }}>
         <h1 style={{ textAlign: "center" }}>StreamDelete</h1>
         <Model
-          title="Delete stream"
+          title={this.titleRender()}
           content="Are you sure to delete this stream?"
           Button={this.ModelButtons()}
         />
@@ -41,7 +49,11 @@ class StreamDelete extends Component {
   }
 }
 
+const mapsStateToProps = (state, ownProps) => {
+  return { streams: state.streams[ownProps.match.params.id] };
+};
+
 export default connect(
-  null,
+  mapsStateToProps,
   { deleteStream, fetchStream }
 )(StreamDelete);
