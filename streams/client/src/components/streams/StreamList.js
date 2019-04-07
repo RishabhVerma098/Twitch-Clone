@@ -15,7 +15,9 @@ class StreamList extends Component {
             EDIT
           </Link>
           {"  "}
-          <span className="btn btn-danger">DELETE</span>
+          <Link to={"/streams/delete/" + stream.id} className="btn btn-danger">
+            DELETE
+          </Link>
         </span>
       );
     }

@@ -10,6 +10,7 @@ class StreamCreate extends Component {
   render() {
     return (
       <div className="container" style={{ marginTop: "50px" }}>
+        <h3>Create your Stream</h3>
         <StreamForm onSubmit={this.onSubmit} />
       </div>
     );

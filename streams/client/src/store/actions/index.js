@@ -37,12 +37,14 @@ export const fetchStream = id => async dispatch => {
 // [PUT] update aur record by taking that single record (get)and then updating that record by (post)
 // combining fetchstream and createstream GET+POST , id => GET , POST => formvalues
 export const editStream = (id, formValues) => async dispatch => {
-  const response = await streamsApi.put("/streams/" + id, formValues);
+  const response = await streamsApi.patch("/streams/" + id, formValues);
   dispatch({ type: "EDIT_STREAM", payload: response.data });
+  history.push("/");
 };
 
 // [DELETE] delete that single stream chosen by the user payload is the deleted stream id , no response is recorded
 export const deleteStream = id => async dispatch => {
   await streamsApi.delete("/streams/" + id);
   dispatch({ type: "DELETE_STREAM", payload: id });
+  history.push("/");
 };
