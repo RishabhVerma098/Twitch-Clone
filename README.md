@@ -1,2 +1,2 @@
 # Twitch-Clone
-![]ReactApp.gif)
+![](image.gif)
